@@ -1,0 +1,66 @@
+
+<html>
+    <head>
+        Working With String and build in function in javascript
+    </head>
+    <body>
+        <script>
+            var text="Nice to meet you"
+            var txt = "Hello Goodmorning to all ,welcome to all";
+            console.log(text);
+            var text = txt.toUpperCase();//pritn 1st way
+            console.log(text);
+
+            console.log(txt.toUpperCase());
+            console.log(txt.toLowerCase());
+
+            let a = txt.charAt(13);
+            console.log(a);
+
+            //slice
+            let res = txt.slice(0, 3);
+            console.log(res);
+
+            //replace keyword
+            let res1 = txt.replace("all", "everyone");//it will replace only first occurence word will replace
+            console.log(res1);
+            let res2 = txt.replace(/all/g, "everyone");//replace all all the words  here g stand for Global
+            console.log(res2);
+
+            //concatinate
+            var t1 = "hello";
+            var t2 = "nice to meet you";
+            var res3 = t1.concat(t2);
+            var res4 = text.concat(txt);
+            console.log(res3);
+            console.log(res4);
+            console.log("Length of text is " + txt.length);
+
+            //substring ()
+            var s1 = text.substring(1, 4);
+            var s2 = text.substring(3);
+            console.log(s1);
+            console.log(s2);
+
+            //split function
+            var str = text.split(" ");
+            console.log(str);
+
+            var str1 = text.split(" ",3);
+            console.log(str1);
+
+            //index of
+            var i1="Hello goodmorning to all"
+            var r1 = i1.indexOf("all");
+            var r2 = i1.lastIndexOf("to");
+            console.log(r1);
+            console.log(r2);
+
+            //trim function -------It is used to remove space if any before and aftr of string
+            let text22 = "       Hello World!        ";
+            let result = text22.trim();
+            console.log(result);
+
+        </script>
+    </body>
+</html>

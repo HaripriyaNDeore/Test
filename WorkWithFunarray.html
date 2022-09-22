@@ -1,0 +1,66 @@
+
+<html>
+<head>
+
+</head>
+<body>
+    <div id="d1"></div>
+   <!-- <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>-->
+    <p>
+        Enter color:<input tyupe="text" id="t1" />
+    </p>
+    <p>
+        <input type="button" value="Add Element at First Position " onclick="AddFirstElememt()" />
+        <input type="button" value="Add at Last " onclick="AddLastElememt()" />
+        <input type="button" value="Remove First Elements " onclick="RemoveFirstElememt()" />
+        <input type="button" value="Remove Last Elements " onclick="RemoveLastElememt()" />
+    </p>
+    <script>
+        //Array
+        var colors = ["Red", "Blue", "Pink", "Black"]
+
+        console.log(colors);
+        var data = " ";
+        function Display()
+        {
+            var data = " ";
+            var data = "<ol type='A'>";
+            for (let i = 0; i < colors.length; i++) {
+                data += "<li>" + colors[i] + "</li>";
+            }
+            data += "</ol>";
+            console.log(data);
+            document.getElementById("d1").innerHTML = data;
+
+        }
+        //it will print list ABCD
+        
+       
+        function AddFirstElememt()
+        {
+            colors.unshift(document.getElementById("t1").value);
+            Display();
+           
+        }
+        function AddLastElememt()
+        {
+            colors.push(document.getElementById("t1").value);
+            Display();
+        }
+        function RemoveFirstElememt()
+        {
+            colors.shift();
+            Display();
+        }
+        function RemoveLastElememt()
+        {
+            colors.pop();
+            Display();
+        }
+        Display();
+    </script>
+</body>
+</html>
+
